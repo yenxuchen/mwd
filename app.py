@@ -45,6 +45,13 @@ def handle_message(event):
     elif msg == '吃飯沒':
         r = '吃了'
 
+    elif msg == '位置':
+        r = LocationSendMessage(
+        title='my location',
+        address='Tokyo',
+        latitude=35.65910807942215,
+        longitude=139.70372892916203)
+    
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=r))
