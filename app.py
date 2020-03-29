@@ -56,7 +56,7 @@ def handle_message(event):
         latitude=35.65910807942215,
         longitude=139.70372892916203)
 
-        line_bot_api.reply_message(event.reply_token, r)
+    line_bot_api.reply_message(event.reply_token, r)
 
 
 if __name__ == "__main__":
