@@ -40,7 +40,7 @@ def handle_message(event):
     message = TextSendMessage(text='拜託成功')
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=event.message.text))
+        TextSendMessage)
 
 
 if __name__ == "__main__":
