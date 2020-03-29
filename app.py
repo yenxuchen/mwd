@@ -41,18 +41,20 @@ def handle_message(event):
     r = '很抱歉我不懂'
 
     if '貼圖' in msg:
-        sticker_message = StickerSendMessage(
-        package_id='1',
-        sticker_id='1'
+        location_message = LocationSendMessage(
+        title='my location',
+        address='Tokyo',
+        latitude=35.65910807942215,
+        longitude=139.70372892916203
         )
 
         line_bot_api.reply_message(
         event.reply_token,
-        sticker_message)
+        location_message)
 
         return
 
-    if msg == ['hi', 'Hi']:
+    if msg == '你好':
         r = '嗨'
     elif msg == '吃飽了沒':
         r = '還沒'
