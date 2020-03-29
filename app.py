@@ -37,16 +37,14 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    msg = event.message.text
-    s = LocationSendMessage(
+    if msg = '位置'
+    message = LocationSendMessage(
     title='my location',
     address='Tokyo',
     latitude=35.65910807942215,
     longitude=139.70372892916203
     )
-    line_bot_api.reply_message(
-        event.reply_token,
-        s)
+    line_bot_api.reply_message(event.reply_token,message)
 
 
 if __name__ == "__main__":
