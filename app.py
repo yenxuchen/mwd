@@ -40,7 +40,7 @@ def handle_message(event):
     msg = event.message.text
     r = '很抱歉我不懂'
 
-    if '貼圖' in msg:
+    if '位置' in msg:
         location_message = LocationSendMessage(
         title='my location',
         address='Tokyo',
@@ -51,6 +51,19 @@ def handle_message(event):
         line_bot_api.reply_message(
         event.reply_token,
         location_message)
+
+        return
+
+    if '選單' in msg:
+        text_message = TextSendMessage(
+        text='Hello, world',
+        quick_reply=QuickReply(items=[
+        QuickReplyButton(action=MessageAction(label="label", text="text"))
+        ]))
+        
+        line_bot_api.reply_message(
+        event.reply_token,
+        text_message)
 
         return
 
