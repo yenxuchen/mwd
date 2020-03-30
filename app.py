@@ -7,7 +7,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage, StickerSendMessage, LocationSendMessage, QuickReplyButton
+    MessageEvent, TextMessage, TextSendMessage, StickerSendMessage, LocationSendMessage, QuickReply, 
 )
 
 app = Flask(__name__)
