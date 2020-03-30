@@ -42,28 +42,15 @@ def handle_message(event):
 
     if '位置' in msg:
         location_message = LocationSendMessage(
-        title='my location',
-        address='Tokyo',
-        latitude=35.65910807942215,
-        longitude=139.70372892916203
+        title='麥味登早餐－清水五權店',
+        address='台中市清水區民治路212號',
+        latitude=24.275972,
+        longitude=120.570197
         )
 
         line_bot_api.reply_message(
         event.reply_token,
         location_message)
-
-        return
-
-    if '選單' in msg:
-        text_message = TextSendMessage(
-        text='Hello, world',
-        quick_reply=QuickReply(items=[
-        QuickReplyButton(action=MessageAction(label="label", text="text"))
-        ]))
-
-        line_bot_api.reply_message(
-        event.reply_token,
-        text_message)
 
         return
 
